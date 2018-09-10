@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>jhx jsp 标签扩展</description>
+    <tlib-version>4.3</tlib-version>
+    <short-name>form</short-name>
+    <uri>http://www.jinhuixin.com/tags/lay</uri>
+    
+    <tag>
+        <description>输出button</description>
+        <name>search-btn</name>
+        <tag-class>com.jhx.common.layui.SearchBtn</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <description>输出text类型的input</description>
+        <name>text</name>
+        <tag-class>com.jhx.common.layui.InputText</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <description>提示文字</description>
+            <name>placeholder</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>可取的值有"inline"、"block"、"none"、 ""，input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出两个时间组件</description>
+        <name>search-times</name>
+        <tag-class>com.jhx.common.layui.SearchTimes</tag-class>
+        <body-content>empty</body-content>
+
+        <attribute>
+            <description>from组件的值</description>
+            <name>from</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>to组件的值</description>
+            <name>to</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出label</description>
+        <name>label</name>
+        <tag-class>com.jhx.common.layui.Label</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出hidden</description>
+        <name>hidden</name>
+        <tag-class>com.jhx.common.layui.InputHidden</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出textarea</description>
+        <name>area</name>
+        <tag-class>com.jhx.common.layui.TextArea</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出th</description>
+        <name>th</name>
+        <tag-class>com.jhx.common.layui.Th</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>width</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>text</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>可取的值有left、right</description>
+            <name>fixed</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>可取的值有checkbox,tdDo,menuDo</description>
+            <name>type</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description>最终会输出为lay-data，cfg配置优先级最高，比如给lay:th设置了fixed，但cfg里也指定了，则以cfg里优先</description>
+            <name>cfg</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出select</description>
+        <name>select</name>
+        <tag-class>com.jhx.common.layui.Select</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>可取的值有"search","inline","block","none","";input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>data</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>extra</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出input radio</description>
+        <name>radio</name>
+        <tag-class>com.jhx.common.layui.InputRadio</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>value</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出一组input radio</description>
+        <name>radios</name>
+        <tag-class>com.jhx.common.layui.InputRadios</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+        </attribute>
+        <attribute>
+            <description>如果为true，则表示会自动提交最近的表单</description>
+            <name>auto</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>data</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>extra</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>falseDisplay</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>trueDisplay</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出input checkbox</description>
+        <name>check</name>
+        <tag-class>com.jhx.common.layui.InputCheck</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+        </attribute>
+        <attribute>
+            <description>如果为true，则表示会自动提交最近的表单</description>
+            <name>auto</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出一组input checkbox</description>
+        <name>checks</name>
+        <tag-class>com.jhx.common.layui.InputChecks</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>input 外边div的class属性值，如果值为divClass="none"或divClass=""则最终输出的html不包括div
+            </description>
+            <name>divClass</name>
+        </attribute>
+        <attribute>
+            <name>data</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>extra</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>输出一组search form</description>
+        <name>search</name>
+        <tag-class>com.jhx.common.layui.SearchForm</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>width</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>method</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    <tag>
+        <description>输出一tr，tr里有一个td，用于检索表单的table布局</description>
+        <name>row</name>
+        <tag-class>com.jhx.common.layui.Row</tag-class>
+        <body-content>JSP</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    <tag>
+        <description>输入操作菜单</description>
+        <name>menus</name>
+        <tag-class>com.jhx.common.layui.Menus</tag-class>
+        <body-content>JSP</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+    <tag>
+        <description>输出 form</description>
+        <name>form</name>
+        <tag-class>com.jhx.common.layui.Form</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description>控制dlg表单按钮显示，btns="none"表示不显示任何按钮，btns="cancel|submit"表示显示取消和提交按钮（默认）,btns="cancel"表示显示一个关闭按钮</description>
+            <name>btns</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>action</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>method</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+
+    <tag>
+        <description>在search form中输出汇总</description>
+        <name>sum</name>
+        <tag-class>com.jhx.common.layui.SearchSum</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <name>display</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>for</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <dynamic-attributes>true</dynamic-attributes>
+    </tag>
+</taglib>
